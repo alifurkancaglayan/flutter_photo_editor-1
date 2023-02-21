@@ -60,12 +60,12 @@ class _SearchLayoutState extends State<SearchLayout> {
             color: Theme.of(context).textTheme.headlineLarge?.color,
           ),
         ),
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.background,
         title: TextField(
           controller: keywordController,
           decoration: InputDecoration(
             border: InputBorder.none,
-            hintText: "e.g : Winter",
+            hintText: "örn : Kış",
             hintStyle: Theme.of(context).textTheme.bodyMedium,
           ),
           style: Theme.of(context).textTheme.bodyLarge,

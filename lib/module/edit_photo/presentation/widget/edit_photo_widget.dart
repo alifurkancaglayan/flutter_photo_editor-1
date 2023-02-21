@@ -20,7 +20,7 @@ class EditPhotoWidget extends StatelessWidget {
         OriginalImage(photo: photo),
 
         ///
-        ComponentLayer(),
+        const ComponentLayer(),
       ],
     );
   }
