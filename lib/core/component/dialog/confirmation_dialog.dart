@@ -4,8 +4,8 @@ Future<T?> showConfirmationDialog<T>(
   BuildContext context, {
   required String title,
   String? desc,
-  String leftText = "Cancel",
-  String rightText = "Discard",
+  String leftText = "İptal",
+  String rightText = "Çıkış",
 }) {
   return showDialog(
     context: context,

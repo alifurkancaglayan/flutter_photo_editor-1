@@ -64,7 +64,7 @@ class _EditPhotoLayoutState extends State<EditPhotoLayout> {
         }
         if (state.downloadStatus == DownloadStatus.success) {
           Navigator.pop(context);
-          showSuccessDialog(context, "Success Download!");
+          showSuccessDialog(context, "İndirme Başarılı!");
         }
 
         if (state.shareStatus == DownloadStatus.failed ||
@@ -96,9 +96,9 @@ class _EditPhotoLayoutState extends State<EditPhotoLayout> {
                 onTap: () async {
                   final result = await showConfirmationDialog(
                     context,
-                    title: "Discard Edits",
+                    title: "Düzenlemeden Ayrıl",
                     desc:
-                        "Are you sure want to Exit ? You'll lose all the edits you've made",
+                        "Çıkmak istediğinize emin misiniz ? Yaptığınız tüm değişikler kaybolacak.",
                   );
                   if (result == null) return;
 
@@ -257,9 +257,9 @@ class _EditPhotoLayoutState extends State<EditPhotoLayout> {
                         onLongPress: (id) async {
                           final result = await showConfirmationDialog(
                             context,
-                            title: "Delete Text ?",
-                            desc: "Are you sure want to Delete this text ?",
-                            rightText: "Delete",
+                            title: "Yazıyı Sil ?",
+                            desc: "Yazıyı silmek istediğinize emin misiniz ?",
+                            rightText: "Sil",
                           );
                           if (result == null) return;
 

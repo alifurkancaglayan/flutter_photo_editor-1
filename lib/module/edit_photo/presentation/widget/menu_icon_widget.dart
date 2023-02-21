@@ -17,8 +17,9 @@ class MenuIconWidget extends StatelessWidget {
       child: Container(
         height: 54,
         width: 54,
-        decoration: BoxDecoration(
-          color: Colors.blueGrey.withOpacity(0.5),
+        decoration: const BoxDecoration(
+          color: Colors.black,
+          // color: Colors.blueGrey.withOpacity(0.5),
           shape: BoxShape.circle,
         ),
         child: Icon(

@@ -117,10 +117,10 @@ class _HomeLayoutState extends State<HomeLayout> {
                   floating: true,
                   centerTitle: false,
                   title: Text(
-                    "Discover",
+                    "Keşfet",
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
-                  backgroundColor: Theme.of(context).backgroundColor,
+                  backgroundColor: Theme.of(context).colorScheme.background,
                   elevation: 0,
                   bottom: PreferredSize(
                     preferredSize: const Size.fromHeight(76),
@@ -147,7 +147,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                "Search keyword, nature",
+                                "Anahtar kelime ara, doğa",
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium
@@ -168,7 +168,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   padding: const EdgeInsets.all(16),
                   sliver: SliverToBoxAdapter(
                     child: Text(
-                      "Popular Images",
+                      "Popüler Resimler",
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),

@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_editor/module/edit_photo/model/dragable_widget_child.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -144,7 +145,7 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                 Navigator.pop(context, result);
               },
               child: Text(
-                "Done",
+                "Bitir",
                 style: Theme.of(context)
                     .textTheme
                     .bodyLarge
@@ -264,6 +265,34 @@ class _AddTextLayoutState extends State<AddTextLayout> {
                         fontSize: fontSize,
                       );
                     },
+                  );
+                },
+              ),
+            ),
+          ),
+          Positioned(
+            right: 16,
+            top: MediaQuery.of(context).padding.top + 70,
+            bottom: 140,
+            child: RotatedBox(
+              quarterTurns: 3,
+              child: ValueListenableBuilder<DragableWidgetTextChild>(
+                valueListenable: _valueListener,
+                builder: (context, value, _) {
+                  return AnimatedTextKit(
+                    animatedTexts: [
+                      ColorizeAnimatedText(_textController.text,
+                          textStyle: const TextStyle(
+                            fontSize: 50.0,
+                            fontFamily: 'Horizon',
+                          ),
+                          colors: [
+                            Colors.purple,
+                            Colors.blue,
+                            Colors.yellow,
+                            Colors.red,
+                          ]),
+                    ],
                   );
                 },
               ),

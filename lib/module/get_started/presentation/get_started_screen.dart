@@ -24,8 +24,8 @@ class GetStartedScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Theme.of(context).backgroundColor,
-                      Theme.of(context).backgroundColor.withOpacity(0.5),
+                      Theme.of(context).colorScheme.background,
+                      Theme.of(context).colorScheme.background.withOpacity(0.2),
                       Colors.transparent,
                     ],
                     begin: Alignment.bottomCenter,
@@ -41,7 +41,7 @@ class GetStartedScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "The best free stock photos, royalty free images & videos shared by creators.",
+                  "Yaratıcılar tarafından paylaşılan en iyi ücretsiz stok fotoğraflar, telifsiz görseller ve videolar.",
                   style: Theme.of(context).textTheme.headlineSmall,
                   textAlign: TextAlign.center,
                 ),
@@ -57,12 +57,13 @@ class GetStartedScreen extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16),
                       ),
                     ),
                     child: Text(
-                      "Explore Now",
+                      "Keşfetmeye Başla",
                       style: Theme.of(context)
                           .textTheme
                           .titleMedium

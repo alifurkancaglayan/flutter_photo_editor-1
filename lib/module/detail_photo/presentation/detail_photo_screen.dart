@@ -56,7 +56,7 @@ class _DetailPhotoLayoutState extends State<DetailPhotoLayout> {
         }
         if (state.downloadStatus == DownloadStatus.success) {
           Navigator.pop(context);
-          showSuccessDialog(context, "Success Download!");
+          showSuccessDialog(context, "İndirme Başarılı!");
         }
 
         if (state.shareStatus == DownloadStatus.failed ||
@@ -83,7 +83,7 @@ class _DetailPhotoLayoutState extends State<DetailPhotoLayout> {
           ),
           centerTitle: false,
           title: Text(
-            "Detail Photo",
+            "Fotoğraf Detayı",
             style: Theme.of(context).textTheme.titleMedium,
           ),
           actions: [
@@ -217,13 +217,14 @@ class _DetailPhotoLayoutState extends State<DetailPhotoLayout> {
                               );
                             },
                             style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
                               padding: const EdgeInsets.symmetric(vertical: 16),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               ),
                             ),
                             child: Text(
-                              "Edit Photo",
+                              "Düzenle",
                               style: Theme.of(context)
                                   .textTheme
                                   .titleSmall
@@ -251,7 +252,7 @@ class _DetailPhotoLayoutState extends State<DetailPhotoLayout> {
                                   ?.color,
                             ),
                             label: Text(
-                              "Download",
+                              "İndir",
                               style: Theme.of(context).textTheme.titleSmall,
                             ),
                           ),

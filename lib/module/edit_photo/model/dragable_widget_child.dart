@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 abstract class DragableWidgetChild {}
@@ -11,6 +12,7 @@ class DragableWidgetTextChild extends DragableWidgetChild {
     this.fontSize = 16,
     this.fontStyle,
     this.fontWeight,
+    this.animatedTextKit,
   });
 
   String text;
@@ -20,6 +22,7 @@ class DragableWidgetTextChild extends DragableWidgetChild {
   double? fontSize;
   FontStyle? fontStyle;
   FontWeight? fontWeight;
+  AnimatedTextKit? animatedTextKit;
 
   DragableWidgetTextChild copyWith({
     String? text,
@@ -29,6 +32,7 @@ class DragableWidgetTextChild extends DragableWidgetChild {
     double? fontSize,
     FontStyle? fontStyle,
     FontWeight? fontWeight,
+    AnimatedTextKit? animatedTextKit,
   }) {
     return DragableWidgetTextChild(
       text: text ?? this.text,
@@ -38,6 +42,7 @@ class DragableWidgetTextChild extends DragableWidgetChild {
       fontSize: fontSize ?? this.fontSize,
       fontStyle: fontStyle ?? this.fontStyle,
       fontWeight: fontWeight ?? this.fontWeight,
+      animatedTextKit: animatedTextKit ?? this.animatedTextKit,
     );
   }
 }
